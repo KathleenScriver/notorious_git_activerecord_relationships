@@ -69,3 +69,28 @@ end
 1. Now can put a pry in environment.rb to run <ModelName>.all and see your seeds.
 
 Make sure your models inherit from `ActiveRecord::Base`
+
+
+
+
+
+
+
+
+Review
+
+cat1.cat_owners
+
+def cat_owners
+  CatOwner.all.select do |cat_owner|
+    cat_owner.cat == self
+  end
+end
+
+cat1.owners
+
+def owners
+  cat_owners.map do |cat_owner|
+    cat_owner.owner
+  end
+end

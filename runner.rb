@@ -1,6 +1,10 @@
 require_relative 'config/environment'
 
-Cli.new.start_game
 
+
+Cli.new.welcome_menu
+
+
+# binding.pry
 
 
